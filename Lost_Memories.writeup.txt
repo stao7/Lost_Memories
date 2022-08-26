@@ -1,0 +1,45 @@
+﻿1. Title: Lost memories. Team: Group 6(Siwen Tao, Bill Wong, Julianna He, Qiuting Zhao) Link: https://github.com/stao7/Lost_Memories
+2. Experience Goal - describing the player's experience goal: We originally played for our design pattern to be a Time Cave which allowed flexibility for both the player and creator to get creative with routes which would have resulted in many different endings. One goal that we had in mind when making our interactive story was that we wanted to let the player get as many options as possible. With Time Cave that was ideally our goal, however as we all delegated work to each other it quickly became a story with different routes but not many endings like a Time Cave would have. This resulted in changing our design pattern to Sorting Hat which ultimately still fits our goal of giving the player many options while retaining our style of the story. We figured that because of our early game choices it would make the most sense creating a heavy branching in the beginning, ultimately determining which major branch the player gets assigned to. From there the player goes through said branch and is provided with options, the only difference is that there aren't as many ending options as we would have liked. We want players to find the character’s memories and figure out what happened choosing different options while playing.
+3. Narrative Stance and Rationale - how the story structure/architecture shapes its meaning: Our interactive story is a second-person narrative which fits more with our story due to the player having to choose between options that were aimed towards them. This was mainly because of the way we wanted to present the player in our fictional world by presenting them with options they would have to take, putting emphasis on the decision that they make throughout the journey. And most choices are presented to the player in first person, since we want the player to be responsible for the character's actions and can bring into the character's emotions.
+4. Story Structure (graphs) - describing the tools Inks provides were used in your game: We used Miro to describe our story structure. By using Miro we were able to figure out what kind of design pattern and goal we wanted for our story. At first we had created a Gauntlet just to get our main focus of what we wanted our topic to be. Once we had our main topic we began branching out into different routes ultimately resulting in a Sorting Hat and Gauntlet and a Branch and Bottleneck. Using Miro was beneficial for us because it let us create a visual representation so we could map out what kind of design pattern we wanted before starting on this project. 
+      (Link to Miro: https://miro.com/app/board/uXjVO6HwWN0=/)
+  
+
+  
+
+5. Key Ink Variables / State Tracking - describing the tools Inks provides were used in your game: In the part of the player searching in the mansion, the player can go to any room and search for specific stuff like a bookshelf, etc. In the coding of this section, we used the parentheses to check if the player entered the specific branch to earn some items. For example, in one of the scenes, the player needs a step ladder to check the top of the bookshelf, and the player needs to enter the kitchen room to grab the step ladder. Therefore when the player enters the branch of the bookshelf, we just check if the player has gone to the branch of the step ladder to decide whether the player has access to the top of the bookshelf. In addition, at the beginning of the game, the player is prompted to select their preferred pronouns. We used the Var named gender to store their answer, and the gender is later used in passages with descriptions of the player experience after waking up and checking the room. For example, the player wakes up and revisits the room. These parts will require additional information about what the player will see later in the game, and the use of gender is to avoid misunderstanding and conflicts with other parts of the story.
+* Gender variable is used to get the gender of the player. It helps determine the gender of the character in the players' memory
+           
+  
+
+* {Knot} to test whether a piece of content has been seen. It will check if the player entered a specific branch to earn some items. Only when {knot} has been seen, the hidden option will occur
+  
+
+* And game text will be different depending on different knot state
+  
+
+* List used for tracking locations that can be traveled to. It will select which storylet(branch) to go to based on players’ choices
+  
+
+* oldMan Variable is used to track if an influential npc has been encountered. It can influence the rest of the story and available players’ options.
+  
+
+6. Ink affordances: Text/Code: In the coding, some of the player's selections will lead the player to have different actions and choices next round. In other ways, the player's selections may let them have fewer or more choices or ways to go in the future. This might happen more effectively in the early branches of the story because the early choice can lead the player to experience a totally different story. However, as the game moves on, the player's choices will affect the ending more than the next choices. Because in one of the storylines we created, the player can explore the way they want in the mansion. And some of the things that the player discovered in the mansion, such as the memories, will be reflected in the end. Also, some of the other things that the player finds out, like the step ladder, can be used as exploring deeper experiences or memories. Therefore the affordances are balanced so that the player’s action can lead to either new available choices of the action or reflection that can be foreshadowing the things that may happen later.
+* Use function to either print different description based on locations, or go to different branch based on the next available location, this can influence the game’s main plot and available player decisions
+  
+
+* Use temporary variables to check whether the player made a specified choice to decide the next branch and available player choices
+  
+
+7. Discourse Example/Demonstration: You walk into the living room, and it is spacious. There is some fresh fruit and biscuits, which you think is impossible with the antiquated looking of everything else. “No way. Why is there food?” You are questioning. Also, there are a few things that you find attractive in this room.
+            * {not Clock}Check the clock. ->Clock
+              +{Clock} Check the clock. ->ClockC
+              +Check the bookshelf. ->Bookshelf
+              +Go back. ->Rooms
+Here is the part of our code that includes the part where the player discovers the living room of the mansion. The choices are listed to let the player choose the path, that they check the clock, bookshelf, or go back to where they were. Also, the “ClockC” path is for the player to reenter the branch where all the things there are explored, and the text will show something like there is nothing more to discover here.
+  
+
+  
+
+8. Something Cool: One thing that we thought was cool was that we didn’t necessarily disagree on anything, if we had different ideas or opinions we would try to incorporate it within the story while still giving it relevance to the plot. For instance, we had different ideas and approaches of how we wanted the story to turn out, but we figured that if we wanted to incorporate everyone’s ideas into one we needed to choose the right design pattern in order to make it happen. Overall, I think our story turned out the way we aimed for while still containing the ideas that everyone had. The game comes with a story which includes many details that are worth rethinking. For example, in the early conversation, the old man mentioned that there were lights and sounds in the mansion, but when the player finds the mansion, no light and no sounds come out of the mansion before the player chooses to step into it. No one is in the mansion which appears in the player’s dream. So who is the old man? Who makes those sounds and conversations? What do the light and the sound come from according to the early conversation? The game mainly focuses on the player regaining memory by going through different ways, but each way contains a different story and a different ending from others. The player may go through a warm, or haunted, or exploratory journey to regain different memories of what happened in the past according to their decisions in game. Different endings are linked with different choices the player makes.   
+9. Resources used: The two main resources we used were the slides presented in lecture, Ink to link passages and track choices provided to players, and Miro to help outline our draft. Miro was essential in helping us plan out our process of how we wanted to approach this project.
